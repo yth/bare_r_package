@@ -10,8 +10,9 @@ check: build
 
 clean:
 	-rm -f bare*tar.gz
-	-rm -fr bare.Rcheck
+	-rm -rf bare.Rcheck
 	-rm -rf src/*.o src/*.so
+	-rm -rf man
 
 document:
 	Rscript -e 'devtools::document()'
