@@ -1,0 +1,29 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(myAdd)
+```
+
+This is an example of the capability of the package.
+
+```{r}
+myAdd::zero() # Captures nothing?
+```
+
+```{r}
+myAdd::add(myAdd::zero(), 1L) # Captures 0L and 1L?
+```
